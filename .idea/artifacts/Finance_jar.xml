@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact name="Finance:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Finance_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Finance.jar">
+        <element id="module-output" name="Finance" />
+      </element>
+      <element id="library" level="project" name="lib" />
+    </root>
+  </artifact>
+</component>
