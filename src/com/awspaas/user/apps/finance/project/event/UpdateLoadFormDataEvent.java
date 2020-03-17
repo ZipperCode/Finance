@@ -9,6 +9,7 @@ import com.actionsoft.sdk.local.api.BOQueryAPI;
 
 import java.util.List;
 
+@Deprecated
 public class UpdateLoadFormDataEvent extends ExecuteListener {
 
     public String getDescription() {
