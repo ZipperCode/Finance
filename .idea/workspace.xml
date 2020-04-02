@@ -7,10 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df4cf793-c608-4298-ac83-2de0bb4be062" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/bx/event/BanProcessSubmitEvent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/bx/event/UpdateProcessStatusEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/bx/event/ProcessCreateAfterStatusEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/customer/event/CustomerFormValidateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/ht/event/ContractFormValidateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/loan/event/LoanFormValidateEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/loan/event/UpdateLoanBackStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/loan/event/UpdateLoanPayStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/loan/event/UpdateLoanSuccessStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/loan/event/UpdateRunningLoanStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/UpdateRunningStatusEvent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/UpdateSuccessStatusEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/UpdateLoadFormDataEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/UpdateLoadFormDataEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Finance/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/ProjectFormValidateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/ProjectFormValidateEvent.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +56,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="finance" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -59,6 +72,28 @@
     <property name="project.structure.side.proportion" value="0.31054977" />
     <property name="settings.editor.selected.configurable" value="database.main" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.awspaas.user.apps.finance.ht.event" />
+      <recent name="com.awspaas.user.apps.finance.bx.event" />
+      <recent name="com.awspaas.user.apps.finance.project.event" />
+      <recent name="com.awspaas.user.apps.finance.loan.event" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="ContractFormValidateEvent" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.awspaas.user.apps.finance.ht.event.ContractFormValidateEvent" />
+      <module name="Finance" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ContractFormValidateEvent" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="df4cf793-c608-4298-ac83-2de0bb4be062" name="Default Changelist" comment="" />
@@ -67,37 +102,96 @@
       <option name="presentableId" value="Default" />
       <updated>1584170778160</updated>
       <workItem from="1584170779720" duration="23803000" />
-      <workItem from="1584459164148" duration="2786000" />
+      <workItem from="1584459164148" duration="2833000" />
+      <workItem from="1584546520560" duration="1806000" />
+      <workItem from="1584754050755" duration="10098000" />
+      <workItem from="1584858852400" duration="7718000" />
+      <workItem from="1585315617790" duration="1392000" />
+      <workItem from="1585383039459" duration="732000" />
+      <workItem from="1585467469435" duration="2794000" />
+      <workItem from="1585667156132" duration="5194000" />
+      <workItem from="1585831844578" duration="4561000" />
     </task>
+    <task id="LOCAL-00001" summary="保存">
+      <created>1584462079642</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584462079657</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="保存" />
+    <option name="LAST_COMMIT_MESSAGE" value="保存" />
   </component>
   <component name="WindowStateProjectService">
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1584175978057">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584175978057" />
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1584461154480">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1585668355847">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1584461154480" />
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1585668355847" />
     <state x="405" y="253" width="556" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584264848814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="405" y="253" width="556" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1584264848814" />
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1584462073396">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1584462073396" />
     <state x="357" y="108" key="FileChooserDialogImpl" timestamp="1584171430122">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="357" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584171430122" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1584176133893">
+    <state width="1323" height="186" key="GridCell.Tab.0.bottom" timestamp="1585672357236">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584176133893" />
+    <state width="1323" height="186" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1585672357236" />
+    <state width="1323" height="186" key="GridCell.Tab.0.center" timestamp="1585672357236">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1585672357236" />
+    <state width="1323" height="186" key="GridCell.Tab.0.left" timestamp="1585672357236">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1585672357236" />
+    <state width="1323" height="186" key="GridCell.Tab.0.right" timestamp="1585672357236">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="186" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585672357236" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1584762260922">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584762260922" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1584462090638">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1584462090638" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1584264380023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584264380023" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584759182642">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584759182642" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/awspaas/user/apps/finance/project/event/ProjectFormValidateEvent.java</url>
+          <line>38</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
