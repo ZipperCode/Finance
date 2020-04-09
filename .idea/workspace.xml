@@ -7,8 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df4cf793-c608-4298-ac83-2de0bb4be062" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractTaskBeforeComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/bo/VoucherRise.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/util/TransUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/constant/FinanceConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/constant/FinanceConst.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractFormValidateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractFormValidateEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanLastTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanLastTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/repay/RepayLastTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/repay/RepayLastTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/travel/TravelTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/travel/TravelTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/voucher/VoucherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/voucher/VoucherFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +114,8 @@
       <workItem from="1586087540595" duration="15595000" />
       <workItem from="1586152791385" duration="18564000" />
       <workItem from="1586266149380" duration="6381000" />
-      <workItem from="1586352435724" duration="3536000" />
+      <workItem from="1586352435724" duration="3688000" />
+      <workItem from="1586434353754" duration="9796000" />
     </task>
     <task id="LOCAL-00001" summary="保存">
       <created>1584462079642</created>
@@ -136,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586274877010</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="保存">
+      <created>1586362718614</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1586362718614</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,18 +167,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584175978057" />
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1586362226351">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1586446334454">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586362226351" />
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586446334454" />
     <state x="405" y="253" width="556" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584264848814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="405" y="253" width="556" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1584264848814" />
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1586274874516">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1586362716384">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586274874516" />
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586362716384" />
     <state x="357" y="108" key="FileChooserDialogImpl" timestamp="1584171430122">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -187,26 +203,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584762260922" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1586274885166">
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1586362726725">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586274885166" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586362726725" />
     <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586121181837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586121181837" />
-    <state x="370" y="119" width="626" height="490" key="find.popup" timestamp="1586169904845">
+    <state x="370" y="119" width="626" height="490" key="find.popup" timestamp="1586442765654">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="370" y="119" width="626" height="490" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586169904845" />
+    <state x="370" y="119" width="626" height="490" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586442765654" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1584264380023">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1584264380023" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1584759182642">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1586444893862">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1584759182642" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1586444893862" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

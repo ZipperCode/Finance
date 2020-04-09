@@ -2,6 +2,7 @@ package com.awspaas.user.apps.finance.event.travel;
 
 import com.actionsoft.bpms.bpmn.engine.core.delegate.ProcessExecutionContext;
 import com.actionsoft.bpms.util.DBSql;
+import com.awspaas.user.apps.finance.bo.VoucherRise;
 import com.awspaas.user.apps.finance.event.base.TaskBeforeComplete;
 
 import java.sql.Connection;

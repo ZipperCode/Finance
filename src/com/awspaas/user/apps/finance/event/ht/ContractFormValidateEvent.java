@@ -42,25 +42,10 @@ public class ContractFormValidateEvent extends InterruptListener {
         if(contractName != null && DBSql.getInt(contractNameSql,new Object[]{bindId})>0){
             throw new BPMNError("ERR01", "当前[合同名称]已存在，请检查");
         }
-        String projects = formData.get("PROJECTAPPROVALNO", String.class);
-        String[] projectNos = projects.split(",");
-        String updateProjectRefer = "UPDATE PROJECT SET IS_USE = 1 WHERE PROJECT_NO IN("+fill(projectNos.length)+")";
-        int update = DBSql.update(updateProjectRefer, projectNos);
-        if(update != projectNos.length){
-            throw new BPMNError("ERR03", "更新Project记录 ：" + update + "条,实际记录 ：" + projectNos.length +"条");
-        }
+
         return true;
     }
 
-    private static String fill(int length){
-        StringBuffer stringBuffer = new StringBuffer();
-        for (int i = 0; i < length; i++) {
-            stringBuffer.append("?").append(",");
-        }
-        return stringBuffer.substring(0,stringBuffer.length()-1);
-    }
 
-    public static void main(String[] args) {
-        System.out.println(fill(5));
-    }
+
 }
