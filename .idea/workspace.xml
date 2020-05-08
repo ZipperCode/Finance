@@ -7,16 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df4cf793-c608-4298-ac83-2de0bb4be062" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/bo/VoucherRise.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/util/TransUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimCLYTaskBeforeComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimFYTaskBeforeComplete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/HXProcessCreateAfter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanAlertMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanProcessCreateAfter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/project/ProjectProcessCreateAfter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/repay/RepayProcessCreateAfter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/salary/SalaryActivityAdhocBranch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/constant/FinanceConst.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/constant/FinanceConst.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractFormValidateEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractFormValidateEvent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/BanProcessSubmitEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ProcessCreateAfterStatusEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimFinTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimFinTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimFirstActivityAdhocBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimFirstActivityAdhocBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimLastTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/ReimLastTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/bx/UpdateProcessStatusEvent.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/ht/ContractTaskBeforeComplete.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanFirstActivityAdhocBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanFirstActivityAdhocBranch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanLastActivityAdhocBranch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanLastActivityAdhocBranch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanLastTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/loan/LoanLastTaskBeforeComplete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/repay/RepayLastTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/repay/RepayLastTaskBeforeComplete.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/travel/TravelTaskBeforeComplete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/event/travel/TravelTaskBeforeComplete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/voucher/VoucherFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/awspaas/user/apps/finance/voucher/VoucherFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +61,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -61,13 +72,13 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="E:/DevelopSoftware/Actionsoft/awsinst/bin/lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15784314" />
     <property name="project.structure.side.proportion" value="0.31054977" />
-    <property name="settings.editor.selected.configurable" value="database.main" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -115,7 +126,18 @@
       <workItem from="1586152791385" duration="18564000" />
       <workItem from="1586266149380" duration="6381000" />
       <workItem from="1586352435724" duration="3688000" />
-      <workItem from="1586434353754" duration="9796000" />
+      <workItem from="1586434353754" duration="10411000" />
+      <workItem from="1586586868575" duration="9005000" />
+      <workItem from="1587384865590" duration="376000" />
+      <workItem from="1588258712602" duration="17370000" />
+      <workItem from="1588562273204" duration="47000" />
+      <workItem from="1588682267228" duration="4229000" />
+      <workItem from="1588686689070" duration="208000" />
+      <workItem from="1588686962698" duration="32000" />
+      <workItem from="1588690702992" duration="514000" />
+      <workItem from="1588691281125" duration="58000" />
+      <workItem from="1588855895809" duration="925000" />
+      <workItem from="1588949836652" duration="2531000" />
     </task>
     <task id="LOCAL-00001" summary="保存">
       <created>1584462079642</created>
@@ -152,11 +174,18 @@
       <option name="project" value="LOCAL" />
       <updated>1586362718614</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="保存">
+      <created>1586448770269</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1586448770269</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="保存" />
@@ -167,22 +196,23 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1584175978057" />
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1586446334454">
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser" timestamp="1588950055526">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1586446334454" />
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1588427851406" />
+    <state x="488" y="72" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1588950055526" />
     <state x="405" y="253" width="556" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584264848814">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="405" y="253" width="556" height="226" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1584264848814" />
-    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1586362716384">
+    <state x="295" y="0" key="CommitChangelistDialog2" timestamp="1586448767126">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586362716384" />
-    <state x="357" y="108" key="FileChooserDialogImpl" timestamp="1584171430122">
+    <state x="295" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1586448767126" />
+    <state x="357" y="108" key="FileChooserDialogImpl" timestamp="1588691338079">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="357" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1584171430122" />
+    <state x="357" y="108" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1588691338079" />
     <state width="1323" height="186" key="GridCell.Tab.0.bottom" timestamp="1585672357236">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -199,21 +229,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1323" height="186" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1585672357236" />
-    <state x="163" y="0" key="SettingsEditor" timestamp="1584762260922">
+    <state x="163" y="0" key="SettingsEditor" timestamp="1588297314319">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1584762260922" />
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1586362726725">
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1588297314319" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2" timestamp="1586448775223">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586362726725" />
+    <state x="275" y="100" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1586448775223" />
     <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586121181837">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="477" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1586121181837" />
-    <state x="370" y="119" width="626" height="490" key="find.popup" timestamp="1586442765654">
+    <state x="370" y="119" width="626" height="490" key="find.popup" timestamp="1588350966974">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="370" y="119" width="626" height="490" key="find.popup/0.0.1366.728/1366.0.1360.728@0.0.1366.728" timestamp="1588350966974" />
     <state x="370" y="119" width="626" height="490" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1586442765654" />
     <state x="339" y="162" key="run.anything.popup" timestamp="1584264380023">
       <screen x="0" y="0" width="1366" height="728" />

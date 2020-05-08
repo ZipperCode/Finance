@@ -82,7 +82,7 @@ public class RepayLastTaskBeforeComplete extends InterruptListener {
         voucherRise.setVoucherDate(DateUtil.formatdate(date));
         voucherRise.setVoucherText("["+DateUtil.formatdate(date)+"]-" + userNo + "的"+money + "元还款申请，剩余待还："
                 +(repayMoney - money)+"借款人："+loanUser + ",借款金额：" + loanMoney);
-        voucherRise.setVoucherType(SDK.getDictAPI().getValue(APPID,  VOUCHER_TYPE_DICT,"0008"));
+        voucherRise.setVoucherType(SDK.getDictAPI().getValue(APPID,  VOUCHER_TYPE_DICT,"0012"));
         voucherRise.setAccountYear(DateUtil.currentDate());
         voucherRise.setAcDocNo(processExecutionContext.execAtScript("AC-@year@month@dayofmonth@sequence('凭证编号',5,0)"));
         voucherRise.setCompanyCode(processExecutionContext.execAtScript("@companyNo"));

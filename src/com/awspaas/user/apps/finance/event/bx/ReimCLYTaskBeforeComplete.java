@@ -11,7 +11,7 @@ import com.awspaas.user.apps.finance.util.StringUtil;
 
 import java.sql.Connection;
 
-public class ReimFinTaskBeforeComplete extends InterruptListener {
+public class ReimCLYTaskBeforeComplete extends InterruptListener {
 
     Logger logger = SDK.getLogAPI().getLogger(this.getClass());
     @Override
@@ -20,6 +20,7 @@ public class ReimFinTaskBeforeComplete extends InterruptListener {
         Connection connection = DBSql.open();
         try{
             connection.setAutoCommit(false);
+            DBSql.update(connection,"UPDATE BO_EU_BX SET REIM_TYPE = ? WHERE BINDID = ?",new Object[]{1,bindId});
             RowMap rowMap = DBSql.getMap("SELECT LOAN_NO,IS_PEOJECT_TRAVEL,PROJECT_NO,REIM_MONEY,BALANCE_MONEY,WRITE_OFF_MONEY  \n" +
                     "FROM BO_EU_BX WHERE BINDID=?",bindId);
             double reimMoney = rowMap.getDouble("REIM_MONEY");

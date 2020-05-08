@@ -1,19 +1,13 @@
-package com.awspaas.user.apps.finance.event.bx;
+package com.awspaas.user.apps.finance.event.repay;
 
 import com.actionsoft.bpms.bpmn.engine.core.delegate.ProcessExecutionContext;
 import com.actionsoft.bpms.bpmn.engine.listener.ExecuteListener;
 import com.actionsoft.sdk.local.SDK;
 
-public class ProcessCreateAfterStatusEvent extends ExecuteListener {
-
-    public String getDescription() {
-        return "流程创建前标记单据状态为--待提交";
-    }
-
+public class RepayProcessCreateAfter extends ExecuteListener {
     @Override
     public void execute(ProcessExecutionContext processExecutionContext) throws Exception {
-        // 流程创建前 将状态改为待提交
-        SDK.getBOAPI().updateByBindId("BO_EU_BX",
+        SDK.getBOAPI().updateByBindId("BO_EU_REPAY",
                 processExecutionContext.getProcessInstance().getId(), "STATUS", 0);
     }
 }

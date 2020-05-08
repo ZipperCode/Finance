@@ -19,6 +19,7 @@ public interface FinanceConst {
 
     String BX_MONEY_LIMIT_DICT = "FINANCE.BX.MONEY.LIMIT";
     String VOUCHER_TYPE_DICT = "ACTC.VOUC.VOUCTYPE";
+    String BX_TYPE_DICT = "FINANCE.REIM.TYPE";
 
     String VOUCHER_TITLE = "VOUCHER_TITLE";
     String VOUCHER_DATE = "VOUCHER_DATE";

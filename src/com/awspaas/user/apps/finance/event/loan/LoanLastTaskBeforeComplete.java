@@ -12,7 +12,6 @@ import com.awspaas.user.apps.finance.util.DateUtil;
 import com.awspaas.user.apps.finance.util.StringUtil;
 import com.awspaas.user.apps.finance.util.TransUtil;
 import com.awspaas.user.apps.finance.voucher.VoucherFactory;
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.sql.Connection;
 import java.util.Date;
@@ -25,15 +24,20 @@ public class LoanLastTaskBeforeComplete extends InterruptListener {
     Logger logger = SDK.getLogAPI().getLogger(this.getClass());
     @Override
     public boolean execute(ProcessExecutionContext processExecutionContext) throws Exception {
-        String bindId = processExecutionContext.getProcessInstance().getId();
-        RowMap rowMap = DBSql.getMap("SELECT IS_LOAN_PROJECT,APPLAY_PROJECT_NO,LOAN_MONEY FROM BO_EU_LOAN_APPLAY WHERE BINDID = ?",bindId);
+        System.out.println("execute");
         Connection connection = DBSql.open();
         try{
+            String bindId = processExecutionContext.getProcessInstance().getId();
+            System.out.println("流程ID = " + bindId);
+            RowMap rowMap = DBSql.getMap("SELECT IS_LOAN_PROJECT,APPLAY_PROJECT_NO,LOAN_MONEY FROM BO_EU_LOAN_APPLAY WHERE BINDID = ?",bindId);
+            System.out.println("rowMap = " + rowMap);
             connection.setAutoCommit(false);
             if(rowMap != null && !rowMap.isEmpty()){
                 // 判断是否项目出差，如果是项目出差，则借款金额应该算在成本中
                 String loanProject = rowMap.getString("IS_LOAN_PROJECT");
+                System.out.println("是否项目借款");
                 if(FinanceConst.YES.equals(loanProject)){
+                    System.out.println("是否项目借款：是");
                     String projectNo = rowMap.getString("APPLAY_PROJECT_NO");
                     double loanMoney = rowMap.getDouble("LOAN_MONEY");
                     if(!StringUtil.isEmpty(projectNo)){
@@ -41,6 +45,7 @@ public class LoanLastTaskBeforeComplete extends InterruptListener {
                     }
                 }
             }
+            System.out.println("构建凭证头");
             buildVoucher(connection,processExecutionContext);
             DBSql.update(connection,"UPDATE BO_EU_LOAN_APPLAY SET APPLAY_STATUS=? ,PAY_DATE = NOW(),UN_WRITE_OFF_MONEY = LOAN_MONEY WHERE BINDID= ?", new Object[]{"4",bindId});
             connection.commit();
@@ -67,7 +72,7 @@ public class LoanLastTaskBeforeComplete extends InterruptListener {
         voucherRise.setVoucherName(userNo + "的"+money + "元借款申请");
         voucherRise.setVoucherDate(DateUtil.formatdate(date));
         voucherRise.setVoucherText("["+DateUtil.formatdate(date)+"]-" + userNo + "的"+money + "元申请，收款人："+receiveUser);
-        voucherRise.setVoucherType(SDK.getDictAPI().getValue(APPID,  VOUCHER_TYPE_DICT,"0006"));
+        voucherRise.setVoucherType(SDK.getDictAPI().getValue(APPID,  VOUCHER_TYPE_DICT,"0011"));
         voucherRise.setAccountYear(DateUtil.currentDate());
         voucherRise.setAcDocNo(processExecutionContext.execAtScript("AC-@year@month@dayofmonth@sequence('凭证编号',5,0)"));
         voucherRise.setCompanyCode(processExecutionContext.execAtScript("@companyNo"));

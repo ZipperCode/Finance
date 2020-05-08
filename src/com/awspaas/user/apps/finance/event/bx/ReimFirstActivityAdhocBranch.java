@@ -32,15 +32,17 @@ public class ReimFirstActivityAdhocBranch extends ValueListener {
             if(reimMoney == 0){
                 throw new BPMNError("ERR01","报销金额为错误，请检查");
             }
-            double balanceMoney = rowMap.getDouble("BALANCE_MONEY");
-            if(balanceMoney <= 0){
-                // 本次冲销金额为负数，表示本次报销金额大于借款单中待冲销金额，不予办理
-                throw new BPMNError("ERR01","借款单待冲销金额小于本次报销金额，不予办理");
-            }
             String applyNo = rowMap.getString("APPLAY_NO");
             String loanNo = rowMap.getString("LOAN_NO");
             String relType = rowMap.getString("REL_TYPE");
             log("申请人 ：" + applyNo + ", 借款单号："+ loanNo + ",核算范围：" + relType);
+            double balanceMoney = rowMap.getDouble("BALANCE_MONEY");
+            if(!StringUtil.isEmpty(loanNo) && balanceMoney <= 0){
+                // 本次冲销金额为负数，表示本次报销金额大于借款单中待冲销金额，不予办理
+                throw new BPMNError("ERR01","借款单待冲销金额小于本次报销金额，不予办理");
+//                DBSql.update("UPDATE BO_EU_BX SET BALANCE_MONEY = ? WHERE BINDID = ?",new java.lang.Object[]{reimMoney,bindId});
+            }
+
             if(!StringUtil.isEmpty(relType)){
                 if("PROJECT".equalsIgnoreCase(relType)){
                     log("项目核算检查");
@@ -88,7 +90,7 @@ public class ReimFirstActivityAdhocBranch extends ValueListener {
                     if(!StringUtil.isEmpty(loanNo)){
                         // 普通核算，有关联的借款,判断所选择的借款是否是项目借款
                         String loanSql = "SELECT LOAN_NO FROM BO_EU_LOAN_APPLAY \n" +
-                                "\tWHERE APPLAY_NO = ? AND ISEND = 1 AND LOAN_NO = ?  AND (APPLAY_PROJECT_NO IS NULL OR APPLAY_PROJECT_NO = '')";
+                                " WHERE APPLAY_NO = ? AND ISEND = 1 AND LOAN_NO = ?  AND  APPLAY_PROJECT_NO <> ''";
                         String resLoanNo = DBSql.getString(loanSql, new Object[]{applyNo,loanNo});
                         if(!StringUtil.isEmpty(resLoanNo)){
                             throw new BPMNError("ERR03","当前借款单关联项目，请走项目报销");
